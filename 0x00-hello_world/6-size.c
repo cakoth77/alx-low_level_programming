@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints "The size of various types on
- * the computer it is compiled and run on"
+ * the computer it is compiled and run on," f
+ * ollowed by a new line
  * Return 0 (Success)
  * /
 int main(void)
