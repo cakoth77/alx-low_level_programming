@@ -7,7 +7,7 @@
  * Return: Always 1.
  */
 int main(void)
-{fwrites("And that piece of art is useful - Dora
+{fwrite("And that piece of art is useful - Dora
 Korpar, 2015-10-19\n", stdout);
 return (1);
 }
