@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints "The size of various types on
- * the computer it is compiled and run on," f
- * ollowed by a new line
- * Return 0 (Success)
+ * the computer it is compiled and run on.
+ * Return: Always 0.
  * /
 int main(void)
 {char a;
@@ -21,5 +20,4 @@ printf("Size of a long long int: %lu byte(s)\n", (unsig
 ned long)sizeof(d));
 printf("Size of a float: %lu byte(s)\n", (unsigned long
 )sizeof(f));
-return (0);
-}
+return (0);}
