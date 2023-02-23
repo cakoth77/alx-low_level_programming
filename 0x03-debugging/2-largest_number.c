@@ -9,6 +9,9 @@
  */
 
 int largest_number(int a, int b, int c)
+a = 972;
+b = -98;
+c = 0;
 {
     int largest;
 
