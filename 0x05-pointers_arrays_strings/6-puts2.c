@@ -4,7 +4,7 @@
  * @str: The string to be treated
  * Return: void
  */
-voif puts2(char *str)
+void puts2(char *str)
 {
 int i;
 int j = 0;
