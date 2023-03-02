@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * _strcmp - Compares pointers to two strings
- * @s1: input value 
+ * _strcmp - Compares two strings
+ * @s1: input value
  * @s2: input value
+ *
  * Return: s1[i] - s2[i]
  */
 int _strcmp(char *s1, char *s2)
