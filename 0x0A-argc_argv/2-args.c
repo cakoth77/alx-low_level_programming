@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 /*Declare variables*/
-int count - 0;
+int count = 0;
 if (argc > 0)
 {
 /*WHILE - Prints each arguments*/
