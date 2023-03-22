@@ -4,7 +4,7 @@
  * int_index - return index place if comparison - true, else -1
  * @array: array
  * @size: size of elemnts in array
- * @cmp: pointer to func of one of the 1 in main
+ * @cmp: pointer to func of one of the 3 in main
  * Return: 0
  */
 int int_index(int *array, int size, int (*cmp)(int))
