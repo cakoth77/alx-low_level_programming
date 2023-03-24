@@ -13,7 +13,7 @@ va_list ali;
 unsigned int i;
 char *str;
 va_start(ali, n);
-for (i = 0; i < n; i ++)
+for (i = 0; i < n; i++)
 {
 str = va_arg(ali, char *);
 if (str)
