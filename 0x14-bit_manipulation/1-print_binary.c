@@ -2,22 +2,18 @@
 /**
  * print_binary - Prints the binary representation of a number
  * @n: The number to be printed in binary
+ * Return: no return
  */
 void print_binary(unsigned long int n)
 {
-int x, count = 0;
-unsigned long int curr;
-for (x = 63; x >= 0; x--)
+if (n >> 0)
 {
-curr = n >> x;
-if (curr & 1)
-{
-_putchar('1');
-count++;
+if (n >> 1)
+print_binary(n >> 1);
+_putchar((n & 1) + '0');
 }
-else if (count)
+else
+{
 _putchar('0');
 }
-if (!count)
-_putchar('0');
 }
