@@ -14,12 +14,12 @@ for (bi = 63; bi >= 0; bi--)
 pre = n >> bi;
 if (pre & 1)
 {
-printf(" '1' \n");
+_putchar('1');
 count++;
 }
 else if (count)
-printf(" '0' \n");
+_putchar('0');
 }
 if (!count)
-printf(" '0' \n");
+_putchar('0');
 }
