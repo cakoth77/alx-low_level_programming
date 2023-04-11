@@ -162,40 +162,40 @@ printf("Unknown: %x>\n", e_ident[EI_OSABI]);
 }
 }
 /**
- * print_abi - prints the ABI version of an ELF header
- * @e_ident: Pointer to an array containing the ELF ABI version
+ * print_abi - Prints the ABI version of an ELF header.
+ * @e_ident: Pointer to an array containing the ELF ABI version.
  */
 void print_abi(unsigned char *e_ident)
 {
-printf(" ABI Version: %d\n",
+printf(" ABI Version:         %d\n",
 e_ident[EI_ABIVERSION]);
 }
 /**
- * print_type - Prints the type of an ELF header
- * @e_type: The ELF type
- * @e_ident: Pointer to an array containing the ELF class
+ * print_type - Prints the type of an ELF header.
+ * @e_type: The ELF type.
+ * @e_ident: Pointer to an array containing the ELF class.
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 e_type >>= 8;
-printf(" Type: ");
+printf(" Type:                  ");
 switch (e_type)
 {
 case ET_NONE:
-printf("NONE(None)\n");
+printf("NONE (None)\n");
 break;
 case ET_REL:
-printf("REL(Relocatable file)\n");
+printf("REL (Relocatable file)\n");
 break;
 case ET_EXEC:
-printf("EXEC(Executable file)\n");
+printf("EXEC (Executable file)\n");
 break;
 case ET_DYN:
-printf("DYN(Shared object file)\n");
+printf("DYN (Shared object file)\n");
 break;
 case ET_CORE:
-printf("CORE(Core file)\n");
+printf("CORE (Core file)\n");
 break;
 default:
 printf("<unknown: %x>\n", e_type);
@@ -208,12 +208,12 @@ printf("<unknown: %x>\n", e_type);
  */
 void print_entry(unsigned long e_entry, unsigned char *e_ident)
 {
-printf(" Entry point address: ");
+printf(" Entry point address:                       ");
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 {
 e_entry = ((e_entry << 8) & 0xFF00FF00) |
 ((e_entry >> 8) & 0xFF00FF);
-e_entry = (e_entry << 10) | (e_entry >> 16);
+e_entry = (e_entry << 16) | (e_entry >> 16);
 }
 if (e_ident[EI_CLASS] == ELFCLASS32)
 printf("%#x\n", (unsigned int)e_entry);
@@ -272,7 +272,7 @@ dprintf(STDERR_FILENO,
 exit(98);
 }
 check_elf(header->e_ident);
-printf("ELF header:\n");
+printf("ELF Header:\n");
 print_magic(header->e_ident);
 print_class(header->e_ident);
 print_data(header->e_ident);
