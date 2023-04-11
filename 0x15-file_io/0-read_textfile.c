@@ -19,5 +19,5 @@ tn = read(fn, buff, letters);
 wr = write(STDOUT_FILENO, buff, tn);
 free(buff);
 close(fn);
-return(wr);
+return (wr);
 }
