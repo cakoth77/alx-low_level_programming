@@ -4,7 +4,7 @@
 /**
  * append_text_to_file - appends text at the end of a file
  * @filename: Name of the file
- * @text_content - NULL terminated string to add at the end of file
+ * @text_content: string to add at the end of file
  * Return: if function fails or filename is NULL - -1
  *         if the file does not exist the user lacks write permissions - -1
  *         otherwise - 1
